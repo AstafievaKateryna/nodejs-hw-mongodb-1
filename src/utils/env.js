@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import {CLOUDINARY} from "../constants/index"
 
 dotenv.config();
 
@@ -9,5 +10,5 @@ export const env = (name, defaultValue) => {
 
   if (defaultValue) return defaultValue;
 
-  throw new Error(`Missing process.env['${name}']`);
+  throw new Error(`Missing process.env['CLOUDINARY.CLOUD_NAME']`);
 };
