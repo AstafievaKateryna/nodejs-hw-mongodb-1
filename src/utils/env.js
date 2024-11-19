@@ -6,8 +6,8 @@ const env = (name, defaultValue) => {
   if (value) return value;
 
   if (defaultValue) return defaultValue;
-  throw new Error(`Missing: process.env[${MONGODB_USER}]`);
-  throw new Error(`Missing: process.env[${name}]`);
+
+  throw new Error(`Missing: process.env['${name}']`);
 };
 
 export default env;
